@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using _053505_Izmer_lab5.Collections;
+using _053505_Izmer_lab6.Collections;
 
-namespace _053505_Izmer_lab5.Entities
+namespace _053505_Izmer_lab6.Entities
 {
     public class Customer
     {
