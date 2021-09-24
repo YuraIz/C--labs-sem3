@@ -1,6 +1,6 @@
 ﻿using System;
-using _053506_Izmer_lab5.Collections;
-using _053506_Izmer_lab5.Entities;
+using _053505_Izmer_lab5.Collections;
+using _053505_Izmer_lab5.Entities;
 
 //Creating product base and adding products
 ProductBase pb = new(new MyCustomCollection<Product>(new Product("Regular thing", 0.99)));
