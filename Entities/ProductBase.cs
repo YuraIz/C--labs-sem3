@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using _053505_Izmer_lab6.Collections;
 
 namespace _053505_Izmer_lab6.Entities
 {
@@ -10,10 +9,10 @@ namespace _053505_Izmer_lab6.Entities
         public event Action<string, string>? ListChanged;
         public event Action<Customer, Product>? NewOrder;
 
-        MyCustomCollection<Customer>? Customers;
-        MyCustomCollection<Product> Products;
+        List<Customer> Customers = new();
+        List<Product> Products;
 
-        public ProductBase(MyCustomCollection<Product> products)
+        public ProductBase(List<Product> products)
         {
             Products = products;
         }
@@ -36,14 +35,7 @@ namespace _053505_Izmer_lab6.Entities
 
         private void AddCustomer(Customer customer)
         {
-            if (Customers == null)
-            {
-                Customers = new MyCustomCollection<Customer>(customer);
-            }
-            else
-            {
-                Customers.Add(customer);
-            }
+            Customers.Add(customer);
             ListChanged?.Invoke("New customer: ", customer.Name);
             customer.OrderEvent += (product) => NewOrder?.Invoke(customer, product);
         }

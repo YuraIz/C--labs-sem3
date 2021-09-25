@@ -1,5 +1,5 @@
 ﻿using System;
-using _053505_Izmer_lab6.Collections;
+using System.Collections.Generic;
 using _053505_Izmer_lab6.Entities;
 
 namespace _053505_Izmer_lab6
@@ -11,7 +11,7 @@ namespace _053505_Izmer_lab6
             Journal journal = new();
 
             //Creating product base and adding products
-            ProductBase pb = new(new MyCustomCollection<Product>(new Product("Regular thing", 0.99)));
+            ProductBase pb = new(new List<Product>() { new Product("Regular thing", 0.99) });
             journal.SaveInfo("New product: ", "Regular thing");
             pb.ListChanged += journal.SaveInfo;
             pb.NewOrder += (customer, product) => Console.WriteLine($"Customer {customer} ordered {product}");
