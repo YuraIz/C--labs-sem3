@@ -7,6 +7,8 @@ namespace _053505_Izmer_lab6.Entities
 {
     public class Customer
     {
+        public event Action<Product>? OrderEvent;
+
         private MyCustomCollection<Product>? _products;
 
         public Customer(string name)
@@ -22,6 +24,7 @@ namespace _053505_Izmer_lab6.Entities
                 _products = new MyCustomCollection<Product>(item);
             else
                 _products.Add(item);
+            OrderEvent?.Invoke(item);
         }
 
         public void Order(IEnumerable<Product> items)
@@ -40,6 +43,11 @@ namespace _053505_Izmer_lab6.Entities
             double sum = 0;
             if (_products != null) sum += _products.Sum(product => product.Price);
             Console.WriteLine($"Sum: {sum}");
+        }
+
+        public override string ToString()
+        {
+            return Name;
         }
     }
 }

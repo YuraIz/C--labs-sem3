@@ -1,3 +1,5 @@
-/bin/**
-/obj/**
-/.idea/**
+bin/
+obj/
+.idea/
+.vscode/
+desktop.ini

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using _053505_Izmer_lab6.Interfaces;
+using _053505_Izmer_lab6.Exceptions;
 
 namespace _053505_Izmer_lab6.Collections
 {
@@ -87,8 +88,19 @@ namespace _053505_Izmer_lab6.Collections
         public void Remove(T item)
         {
             var current = (MyCustomCollectionItem<T>)_first.Target!;
-            while (current.Next != null && !current.Next.Value!.Equals(item)) current = current.Next;
-            if (current.Next != null) current.Next = current.Next.Next;
+            while (current.Next != null && !current.Next.Value!.Equals(item))
+            {
+                current = current.Next;
+            }
+            if (current.Next != null)
+            {
+                current.Next = current.Next.Next;
+            }
+            else
+            {
+                throw new ItemDoesNotExistsException();
+            }
+            
         }
 
         public T RemoveCurrent()
