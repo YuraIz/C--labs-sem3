@@ -31,11 +31,11 @@ namespace _053505_Izmer_lab7.Entities
 
         public string NameOfTheBestCustomer()
         {
-            Customers.Sort((x, y) => x.Sum().CompareTo(y.Sum()));
+            Customers.Sort((x, y) => y.Sum().CompareTo(x.Sum()));
             return Customers[0].Name;
         }
 
-        public double CountOfCustomersWhoPaidMoreThan(double price)
+        public int CountOfCustomersWhoPaidMoreThan(double price)
         {
             int count = 0;
             Customers.Aggregate((x, y) =>
@@ -44,6 +44,16 @@ namespace _053505_Izmer_lab7.Entities
                 return y;
             });
             return count;
+        }
+
+        public double SumOfSoldProducts()
+        {
+            double sum = 0;
+            foreach (var customer in Customers)
+            {
+                sum += customer.Sum();
+            }
+            return sum;
         }
 
         public Product FindProduct(string name) => Products[name];
@@ -69,6 +79,15 @@ namespace _053505_Izmer_lab7.Entities
         public void PrintOrderOfCustomer(string name) => FindCustomer(name)!.PrintOrder();
 
         public void PrintSumOfCustomer(string name) => FindCustomer(name)!.PrintSum();
+
+
+        public void PrintSumForEachProductOfCustomer(string name)
+        {
+            foreach (var sum in FindCustomer(name)!.SumPaidForEachProduct())
+            {
+                Console.WriteLine($"{sum.Key} {sum.Value}");
+            }
+        }
 
         public void MakeNewOrder(Customer customer, Product product)
         {
