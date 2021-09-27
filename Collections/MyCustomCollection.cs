@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using _053506_Izmer_lab5.Interfaces;
+using _053505_Izmer_lab8.Interfaces;
 
-namespace _053506_Izmer_lab5.Collections
+namespace _053505_Izmer_lab8.Collections
 {
     public class MyCustomCollectionItem<T>
     {

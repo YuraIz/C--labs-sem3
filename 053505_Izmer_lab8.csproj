@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>_053506_Izmer_lab5</RootNamespace>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>_053505_Izmer_lab8</RootNamespace>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
