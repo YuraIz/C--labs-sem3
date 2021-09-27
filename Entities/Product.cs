@@ -1,4 +1,4 @@
-﻿namespace _053505_Izmer_lab6.Entities
+﻿namespace _053505_Izmer_lab7.Entities
 {
     public class Product
     {

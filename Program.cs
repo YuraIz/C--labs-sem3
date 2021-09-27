@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using _053505_Izmer_lab6.Entities;
+using _053505_Izmer_lab7.Entities;
 
-namespace _053505_Izmer_lab6
+namespace _053505_Izmer_lab7
 {
     class Program
     {

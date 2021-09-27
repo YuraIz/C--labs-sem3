@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _053505_Izmer_lab6.Entities
+namespace _053505_Izmer_lab7.Entities
 {
     public class ProductBase
     {
@@ -10,17 +10,43 @@ namespace _053505_Izmer_lab6.Entities
         public event Action<Customer, Product>? NewOrder;
 
         List<Customer> Customers = new();
-        List<Product> Products;
+        Dictionary<String, Product> Products = new();
 
         public ProductBase(List<Product> products)
         {
-            Products = products;
+            products.ForEach((product) => Products.Add(product.Name, product));
         }
 
-        public Product? FindProduct(string name)
+        public string[] ProductNamesByPrice()
         {
-            return Products.FirstOrDefault(product => product.Name == name);
+            List<Product> pl = Products.Values.ToList();
+            pl.Sort((x, y) => x.Price.CompareTo(y.Price));
+            var names = new string[pl.Count];
+            for (int i = 0; i < pl.Count; i++)
+            {
+                names[i] = pl[i].Name;
+            }
+            return names;
         }
+
+        public string NameOfTheBestCustomer()
+        {
+            Customers.Sort((x, y) => x.Sum().CompareTo(y.Sum()));
+            return Customers[0].Name;
+        }
+
+        public double CountOfCustomersWhoPaidMoreThan(double price)
+        {
+            int count = 0;
+            Customers.Aggregate((x, y) =>
+            {
+                if (x.Sum() > price) count++;
+                return y;
+            });
+            return count;
+        }
+
+        public Product FindProduct(string name) => Products[name];
 
         private Customer? FindCustomer(string name)
         {
@@ -29,7 +55,7 @@ namespace _053505_Izmer_lab6.Entities
 
         public void AddProduct(Product product)
         {
-            Products.Add(product);
+            Products.Add(product.Name, product);
             ListChanged?.Invoke("New product: ", product.Name);
         }
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _053505_Izmer_lab6.Entities
+namespace _053505_Izmer_lab7.Entities
 {
     public class Customer
     {
@@ -34,11 +34,23 @@ namespace _053505_Izmer_lab6.Entities
             foreach (var product in _products) Console.WriteLine(product);
         }
 
+
+        public Dictionary<string, double> SumPaidForEachProduct()
+        {
+            var productGroups = from product in _products group product by product.Name;
+            Dictionary<string, double> sumPaidForEachProduct = new();
+            foreach (IGrouping<string, Product> g in productGroups)
+            {
+                sumPaidForEachProduct.Add(g.Key, g.Sum((p) => p.Price));
+            }
+            return sumPaidForEachProduct;
+        }
+
+        public double Sum() => _products.Sum((p) => p.Price);
+
         public void PrintSum()
         {
-            double sum = 0;
-            if (_products != null) sum += _products.Sum(product => product.Price);
-            Console.WriteLine($"Sum: {sum}");
+            Console.WriteLine($"Sum: {Sum()}");
         }
 
         public override string ToString()

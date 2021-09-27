@@ -2,7 +2,7 @@ using System;
 using System.Runtime.Serialization;
 
 
-namespace _053505_Izmer_lab6.Exceptions
+namespace _053505_Izmer_lab7.Exceptions
 {
     public class ItemDoesNotExistsException : Exception
     {

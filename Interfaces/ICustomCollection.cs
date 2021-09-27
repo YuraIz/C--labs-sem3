@@ -1,4 +1,4 @@
-namespace _053505_Izmer_lab6.Interfaces
+namespace _053505_Izmer_lab7.Interfaces
 {
     internal interface ICustomCollection<T>
     {
