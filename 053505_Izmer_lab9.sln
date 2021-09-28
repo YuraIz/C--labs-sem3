@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "053505_Izmer_lab9", "053505_Izmer_lab9.csproj", "{F0AC3F85-D17F-4E67-8CF6-B9AAB6827D15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "053505_Izmer_lab9.Domain", "053505_Izmer_lab9.Domain\053505_Izmer_lab9.Domain.csproj", "{53CF8E6C-4368-4A29-8120-D503088FC636}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serializer", "Serializer\Serializer.csproj", "{DB89B7B2-E164-42C8-B24E-179B8EA2B01F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0AC3F85-D17F-4E67-8CF6-B9AAB6827D15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0AC3F85-D17F-4E67-8CF6-B9AAB6827D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0AC3F85-D17F-4E67-8CF6-B9AAB6827D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0AC3F85-D17F-4E67-8CF6-B9AAB6827D15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53CF8E6C-4368-4A29-8120-D503088FC636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53CF8E6C-4368-4A29-8120-D503088FC636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53CF8E6C-4368-4A29-8120-D503088FC636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53CF8E6C-4368-4A29-8120-D503088FC636}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB89B7B2-E164-42C8-B24E-179B8EA2B01F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB89B7B2-E164-42C8-B24E-179B8EA2B01F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB89B7B2-E164-42C8-B24E-179B8EA2B01F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB89B7B2-E164-42C8-B24E-179B8EA2B01F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
