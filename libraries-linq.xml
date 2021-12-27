@@ -1,0 +1,29 @@
+<Root>
+  <Library>
+    <BookDepository>
+      <Book Name="book" PageCount="15" />
+    </BookDepository>
+    <BookDepository>
+      <Book Name="book" PageCount="15" />
+      <Book Name="book" PageCount="15" />
+    </BookDepository>
+  </Library>
+  <Library>
+    <BookDepository>
+      <Book Name="book" PageCount="15" />
+    </BookDepository>
+    <BookDepository>
+      <Book Name="book" PageCount="15" />
+      <Book Name="book" PageCount="15" />
+    </BookDepository>
+  </Library>
+  <Library>
+    <BookDepository>
+      <Book Name="book" PageCount="15" />
+    </BookDepository>
+    <BookDepository>
+      <Book Name="book" PageCount="15" />
+      <Book Name="book" PageCount="15" />
+    </BookDepository>
+  </Library>
+</Root>

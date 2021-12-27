@@ -1,5 +1,5 @@
-using _053505_Izmer_lab9.Domain.Entities;
-namespace _053505_Izmer_lab9.Domain.Interfaces;
+using Domain.Entities;
+namespace Domain.Interfaces;
 interface ISerializer
 {
     IEnumerable<Library> DeSerializeByLINQ(string fileName);
