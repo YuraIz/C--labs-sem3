@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 bin/
 obj/
 .idea/
 .vscode/
 desktop.ini
+=======
+/bin/**
+/obj/**
+/.idea/**
+>>>>>>> 5d271a3 (lab9 finished)

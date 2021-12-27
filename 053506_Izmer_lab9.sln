@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "053506_Izmer_lab9", "053506_Izmer_lab9.csproj", "{32B2B3CE-CEB3-441A-94CF-B15E5D8D8921}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{5C8B5B68-F2D6-4B5C-AB84-2C6EBEF2F695}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32B2B3CE-CEB3-441A-94CF-B15E5D8D8921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32B2B3CE-CEB3-441A-94CF-B15E5D8D8921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32B2B3CE-CEB3-441A-94CF-B15E5D8D8921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32B2B3CE-CEB3-441A-94CF-B15E5D8D8921}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C8B5B68-F2D6-4B5C-AB84-2C6EBEF2F695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C8B5B68-F2D6-4B5C-AB84-2C6EBEF2F695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C8B5B68-F2D6-4B5C-AB84-2C6EBEF2F695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C8B5B68-F2D6-4B5C-AB84-2C6EBEF2F695}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
